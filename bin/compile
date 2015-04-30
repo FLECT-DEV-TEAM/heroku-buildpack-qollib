@@ -4,7 +4,7 @@ indent() {
   sed -u 's/^/       /'
 }
 
-echo "-----> Install RM20BspLibTb"
+echo "-----> Install ResMed Library"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
 LIBRARY_DIR="qollib"
@@ -23,7 +23,7 @@ cd $VENDOR_DIR
 mkdir -p $LIBRARY_DIR
 cd $LIBRARY_DIR
 curl --proxy $PROXY_URL $DOWNLOAD_URL -O
-chmod +x RM20BspLibTb
+chmod +x RM20BspTb
 
 echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/qollib.sh"
